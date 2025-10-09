@@ -1,30 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Perfumeria Droblas</title>
-</head>
+    <meta charset="UTF-8">
+    <title>Perfumeria Droblas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 <body>
-  <header>
-    <h1>Perfumeria Droblas</h1>
-  </header>
+    
+    <header>
+        <h1>Perfumeria Droblas</h1>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+            <div id="carritoContador">Carrito (0)</div>
+        </nav>
+    </header>
 
-  <main>
-    <section>
-        <h2>Montale Arabians Tonka</h2>
-        <p>Un perfume intenso, oriental y especiado, que combina rosa, oud y haba tonka.</p>
-        <img src="https://http2.mlstatic.com/D_NQ_NP_724085-MLU70419121444_072023-O.webp" alt="Perfume Montale Arabians Tonka">
+    <main>
+        <section id="productos">
+            <h2>Fragancias Exclusivas</h2>
+            
+            <article id="perfume-1">
+                <h3>Montale Arabians Tonka</h3>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_724085-MLU70419121444_072023-O.webp" alt="Perfume Montale Arabians Tonka">
+                <p>Un perfume intenso, oriental y especiado, que combina rosa, oud y haba tonka.</p>
+                <div class="producto-info">
+                    <div id="precio-1">$150.000</div> 
+                    <button id="btnComprar1">Añadir al Carrito</button>
+                </div>
+                <hr>
+            </article>
 
-      
-        <h2>Mancera Red Tobacco</h2>
-        <p>Una fragancia potente y cálida, con notas de tabaco, especias y maderas.</p>
-        <img src="data:image/jpeg;base64,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" alt="Perfume Mancera Red Tobacco">
-      </section>
-  </main>
+            <article id="perfume-2">
+                <h3>Mancera Red Tobacco</h3>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAPEA8VEBUQGBUQFQ8QDw8PDw8QFREYFxUVFRUYHSggGBolGxUVIjEhJSkrLi4uFx8zODMsNygvLisBCgoKDg0OGhAQFysdHR0tLSstLS4rKy0tLS0tLystLSstLSsrKy0tKy0tLS0tLS0tMS03NystLS0rLTc3KzctLf/AABEIAP0AxwMBIgACEQEDEQA/ALxQhCAQha useDispatch<dispatching>
+            <article id="perfume-3">
+                <h3>Xerjoff Erba Pura</h3>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_949773-MLA81201698966_122024-O.webp" alt="Perfume Xerjoff Erba Pura" >
+                <p>Una explosión de frutas mediterráneas, con un fondo de almizcle blanco y ámbar.</p>
+                <div class="producto-info">
+                    <div id="precio-3">$140.000</div>
+                    <button id="btnComprar3">Añadir al Carrito</button>
+                </div>
+                <hr>
+            </article>
 
+            <article id="perfume-4">
+                <h3>Armani Stronger with You</h3>
+                <img src="data:image/jpeg;base64,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" alt="Perfume Mancera Red Tobacco" >
+                <p>Una fragancia potente y cálida, con notas de tabaco, especias y maderas.</p>
+                <div class="producto-info">
+                    <div id="precio-2">$135.000</div>
+                    <button id="btnComprar2">Añadir al Carrito</button>
+                </div>
+                <hr>
+            </article>
 
-  <footer>
-    <p>Alain Droblas</p>
-  </footer>
+            <article id="perfume-3">
+                <h3>Xerjoff Erba Pura</h3>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_949773-MLA81201698966_122024-O.webp" alt="Perfume Xerjoff Erba Pura" >
+                <p>Una explosión de frutas mediterráneas, con un fondo de almizcle blanco y ámbar.</p>
+                <div class="producto-info">
+                    <div id="precio-3">$140.000</div>
+                    <button id="btnComprar3">Añadir al Carrito</button>
+                </div>
+                <hr>
+            </article>
+
+            <article id="perfume-4">
+                <h3>Armani Stronger with You</h3>
+                <img src="data:image/jpeg;base64,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" alt="Perfume Armani Stronger with You" >
+                <p>Una fragancia dulce y especiada con castaña, vainilla y un toque de cardamomo.</p>
+                <div class="producto-info">
+                    <div id="precio-4">$95.000</div>
+                    <button id="btnComprar4">Añadir al Carrito</button>
+                </div>
+                <hr>
+            </article>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Perfumería Droblas | Fundador: Alain Droblas</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
