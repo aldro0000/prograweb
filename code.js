@@ -38,3 +38,4 @@ function mostrarPerfumes() {
 }
 
 document.addEventListener("DOMContentLoaded", mostrarPerfumes);
+ 
