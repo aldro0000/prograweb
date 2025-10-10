@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perfumería Droblas</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="brand">Perfumería Droblas</a>
+    <nav class="nav">
+      <a href="#destacados" class="nav__link">Nicho</a>
+      <a href="#coleccionDisenador" class="nav__link">Diseñador</a>
+      <a href="#paraElla" class="nav__link">Para Ella</a>
+    </nav>
+  </div>
+</header>
 <body>
 
-  <header class="barra">
-    <div class="barra-contenedor">
-      <form class="buscador" id="form-buscar">
-        <input id="input-buscar" type="text" placeholder="¿Qué estás buscando?">
-        <button type="submit">🔍</button>
-      </form>
+  <section class="hero">
+    <video
+      src="archivos/Montale%20Paris%20Arabians%20Tonka%20Eau%20de%20Parfum%20-%20Profumeria%20Dabbene%20(1080p,%20h264).mp4"
+      autoplay muted loop playsinline></video>
+  </section>
 
-      <a href="index.html" class="marca">Perfumería Droblas</a>
+  <main class="container">
+    <section class="block">
+      <h2 class="section-title">Nicho</h2>
+      <div id="destacados" class="grid"></div>
+    </section>
 
-      <nav class="acciones">
-        <a href="index.html" class="activo">Inicio</a>
-        <a href="#">Tienda</a>
-        <a href="#">Carrito (0)</a>
-      </nav>
-    </div>
-  </header> 
+    <section class="block">
+      <h2 class="section-title">Colección Diseñador</h2>
+      <div id="coleccionDisenador" class="grid"></div>
+    </section>
 
- 
-
-  <section class="video-portada">
-  <video
-    src="archivos/Montale%20Paris%20Arabians%20Tonka%20Eau%20de%20Parfum%20-%20Profumeria%20Dabbene%20(1080p,%20h264).mp4"
-    autoplay muted loop>
-  </video>
-</section>
-
-
-  <main class="contenedor">
-    <h2 class="titulo-centro">Fragancias de Nicho</h2>
-    <div id="productos" class="fila-productos"></div>
+    <section class="block">
+      <h2 class="section-title">Para Ella</h2>
+      <div id="paraElla" class="grid"></div>
+    </section>
   </main>
+  
 
-  <footer class="pie">
-    <p>TODOS LOS DERECHOS RESERVADOS - © 2025 Perfumería Droblas</p>
-  </footer>
+  <footer class="footer">© 2025 Perfumería Droblas</footer>
 
-  <script src="code.js"></script>
+  <script src="code.js" defer></script>
 </body>
 </html>
