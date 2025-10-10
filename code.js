@@ -39,13 +39,15 @@ const productos = [
     imagen: "archivos/LIBRE.jpg", categoria: "ella" }
 ];
 
+let carrito = [];
+
 const price = (v) => "$" + Number(v).toLocaleString("es-AR");
 
 function renderSeccion(contenedorId, categoria) {
   const box = document.getElementById(contenedorId);
   if (!box) return;
 
-  const cardsHtml = productos
+  const tarjetasHtml = productos
     .filter(p => p.categoria === categoria)
     .map(p => `
       <article class="tarjeta">
@@ -53,11 +55,24 @@ function renderSeccion(contenedorId, categoria) {
         <h4>${p.nombre}</h4>
         <p>${p.descripcion}</p>
         <div class="precio">${price(p.precio)}</div>
+        <button class="btn-agregar" onclick="agregarAlCarrito(${p.id})">Agregar al Carrito</button>
       </article>
     `)
     .join("");
 
-  box.innerHTML = cardsHtml;
+  box.innerHTML = tarjetasHtml;
+}
+
+function agregarAlCarrito(id) {
+  const producto = productos.find(p => p.id === id);
+  if (producto) {
+    carrito.push(producto);
+    actualizarContador();
+  }
+}
+
+function actualizarContador() {
+  document.getElementById('contador-carrito').textContent = carrito.length;
 }
 
 function init() {
