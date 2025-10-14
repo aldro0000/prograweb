@@ -145,6 +145,7 @@ function init() {
         renderSeccion("coleccionDisenador", "disenador");
         renderSeccion("paraElla", "ella");
     }
+    
 
     if (document.getElementById("productos-tienda")) {
         renderTiendaCompleta();
