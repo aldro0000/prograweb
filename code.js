@@ -38,11 +38,12 @@ const productos = [
       descripcion: "Flor de naranjo, orquídea y lavanda. Poder y libertad.",
       imagen: "archivos/LIBRE.jpg", categoria: "ella" }
 ];
+
 const price = (v) => "$" + Number(v).toLocaleString("es-AR");
 const CLAVE_CARRITO = "perfumeriaDroblasCarrito";
 let carrito = [];
 
-// guardado del carrito
+// Guardado del carrito
 function cargarCarrito() {
     const guardado = localStorage.getItem(CLAVE_CARRITO);
     carrito = guardado ? JSON.parse(guardado) : [];
@@ -55,15 +56,7 @@ function guardarCarrito() {
 // Actualiza el número de ítems
 function actualizarContadorCarrito() {
     const contadorElement = document.getElementById("contador-carrito");
-    if (!contadorElement) {
-        //  si no existe el span (productos.html)
-        const cartLink = document.querySelector(".cart-link");
-        if (cartLink) {
-            const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-            cartLink.textContent = `CARRITO (${totalItems})`;
-        }
-        return;
-    }
+    if (!contadorElement) return;
 
     let totalItems = 0;
     for (const item of carrito) {
@@ -131,22 +124,22 @@ function agregarAlCarrito(idProducto) {
     }
 
     guardarCarrito();
-    actualizarContadorCarrito(); // ACTUALIZA EL CONTADOR DESPUÉS DE AGREGAR
+    actualizarContadorCarrito();
     alert("¡Producto añadido al carrito!");
 }
 
-// Inicialización de la página de inicio
 function init() {
     cargarCarrito();
     actualizarContadorCarrito();
 
+    // Para index.html
     if (document.getElementById("destacados")) {
         renderSeccion("destacados", "nicho");
         renderSeccion("coleccionDisenador", "disenador");
         renderSeccion("paraElla", "ella");
     }
-    
 
+    // Para productos.html
     if (document.getElementById("productos-tienda")) {
         renderTiendaCompleta();
     }
