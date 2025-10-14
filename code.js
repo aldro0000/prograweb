@@ -1,10 +1,10 @@
 const productos = [
     // NICHO
-    { id: 1, nombre: "Mancera Red Tobacco", precio: 135000,
+    { id: 1, nombre: "Mancera Red Tobacco", precio: 180000,
       descripcion: "Tabaco intenso, canela y maderas. Cálido y potente.",
       imagen: "archivos/descarga%20(4).jpg", categoria: "nicho" },
 
-    { id: 2, nombre: "Xerjoff Erba Pura", precio: 140000,
+    { id: 2, nombre: "Xerjoff Erba Pura", precio: 235000,
       descripcion: "Explosión de frutas cítricas, dulce y adictivo.",
       imagen: "archivos/descarga%20(5).jpg", categoria: "nicho" },
 
@@ -17,7 +17,7 @@ const productos = [
       descripcion: "Bergamota y ambroxan. Frescura icónica y salvaje.",
       imagen: "archivos/SAUVAGE.jpg", categoria: "disenador" },
 
-    { id: 5, nombre: "Armani Stronger With You", precio: 95000,
+    { id: 5, nombre: "Armani Stronger With You", precio: 115000,
       descripcion: "Castaña, vainilla y salvia. Dulce, especiado y magnético.",
       imagen: "archivos/SWY.jpg", categoria: "disenador" },
 
@@ -26,15 +26,15 @@ const productos = [
       imagen: "archivos/BDC%20PARFUM.jpg", categoria: "disenador" },
 
     // ELLA
-    { id: 7, nombre: "Parfums de Marly Delina", precio: 805005.55,
+    { id: 7, nombre: "Parfums de Marly Delina", precio: 346000,
       descripcion: "Rosa turca, lichi y vainilla. Femenina y envolvente.",
       imagen: "archivos/DELINA.jpg", categoria: "ella" },
 
-    { id: 8, nombre: "Guerlain Mon Guerlain", precio: 110000,
+    { id: 8, nombre: "Guerlain Mon Guerlain", precio: 210000,
       descripcion: "Lavanda y vainilla. Suave, adictivo y sensual.",
       imagen: "archivos/GUERLAIN.jpg", categoria: "ella" },
 
-    { id: 9, nombre: "YSL Libre Intense", precio: 105000,
+    { id: 9, nombre: "YSL Libre Intense", precio: 145000,
       descripcion: "Flor de naranjo, orquídea y lavanda. Poder y libertad.",
       imagen: "archivos/LIBRE.jpg", categoria: "ella" }
 ];
