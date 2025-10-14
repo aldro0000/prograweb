@@ -19,4 +19,16 @@ function cargarCarrito() {
     const guardado = localStorage.getItem(CLAVE_CARRITO);
     carrito = guardado ? JSON.parse(guardado) : [];
 }
+function guardarCarrito() {
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+}
 
+function actualizarContadorCarrito() {
+    const contadorElement = document.getElementById("contador-carrito");
+    if (contadorElement) {
+        const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        contadorElement.textContent = totalItems;
+    }
+}
+
+// arranco con el crud
