@@ -47,11 +47,12 @@ let carrito = [];
 function cargarCarrito() {
     const guardado = localStorage.getItem(CLAVE_CARRITO);
     carrito = guardado ? JSON.parse(guardado) : [];
-    carrito = carrito.map(it => {
-    if (it.imagen) return it;
-    const prod = productos.find(p => p.id === it.id);
-    return prod ? { ...it, imagen: prod.imagen } : it;
-  });
+    for (let i = 0; i < carrito.length; i++) {
+    const prod = productos.find(p => p.id === carrito[i].id);
+    if (prod && !carrito[i].imagen) {
+      carrito[i].imagen = prod.imagen;
+    }
+  }
 }
 
 function guardarCarrito() {
