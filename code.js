@@ -30,9 +30,9 @@ const productos = [
       descripcion: "Rosa turca, lichi y vainilla. Femenina y envolvente.",
       imagen: "archivos/DELINA.jpg", categoria: "ella" },
 
-    { id: 8, nombre: "Guerlain Mon Guerlain", precio: 210000,
-      descripcion: "Lavanda y vainilla. Suave, adictivo y sensual.",
-      imagen: "archivos/GUERLAIN.jpg", categoria: "ella" },
+    { id: 8, nombre: "Burberry Her", precio: 210000,
+      descripcion: "Una explosión de bayas rojas y negras con un corazón floral de jazmín y violeta, suavizado por notas de almizcle y ámbar. Fresca,adictiva y sensual.",
+      imagen: "archivos/burher.jpg", categoria: "ella" },
 
     { id: 9, nombre: "YSL Libre Intense", precio: 145000,
       descripcion: "Flor de naranjo, orquídea y lavanda. Poder y libertad.",
