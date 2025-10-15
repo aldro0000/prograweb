@@ -349,3 +349,38 @@ header {
     width: 125px;
     height: auto;
 }
+/* --- CARRITO--- */
+#carrito-items .d-flex {
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+#carrito-items img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+#carrito-items .flex-grow-1 {
+  width: 100%;
+}
+
+#carrito-items .text-end {
+  position: absolute;
+  right: 12px;      
+  top: 50%;
+  transform: translateY(-50%); /* centrado vertical */
+  white-space: nowrap;
+  text-align: right;
+}
+
+#carrito-items .fw-bold {
+  font-size: 0.9rem;
+}
+
+#carrito-total {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
