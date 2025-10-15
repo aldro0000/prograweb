@@ -42,17 +42,10 @@ const productos = [
 const price = (v) => "$" + Number(v).toLocaleString("es-AR");
 const CLAVE_CARRITO = "perfumeriaDroblasCarrito";
 let carrito = [];
-
 // Guardado del carrito
 function cargarCarrito() {
     const guardado = localStorage.getItem(CLAVE_CARRITO);
     carrito = guardado ? JSON.parse(guardado) : [];
-    for (let i = 0; i < carrito.length; i++) {
-    const prod = productos.find(p => p.id === carrito[i].id);
-    if (prod && !carrito[i].imagen) {
-      carrito[i].imagen = prod.imagen;
-    }
-  }
 }
 
 function guardarCarrito() {
@@ -103,13 +96,14 @@ function renderTiendaCompleta() {
                 <h4>${p.nombre}</h4>
                 <p>${p.descripcion}</p>
                 <div class="precio">${price(p.precio)}</div>
-                <button class="boton-agregar" data-id="${p.id}">Agregar al carrito</button> 
+                <button class="boton-agregar" data-id="${p.id}">Agregar al carrito</button>
             </article>
         `)
         .join("");
 
     box.innerHTML = tarjetasHtml;
 }
+
 function restarDelCarrito(idProducto) {
   idProducto = Number(idProducto);
   const item = carrito.find(i => i.id === idProducto);
@@ -197,7 +191,6 @@ function agregarAlCarrito(idProducto) {
             });
         }
     }
-
     guardarCarrito();
     actualizarContadorCarrito();
     renderCarrito();
@@ -234,7 +227,6 @@ document.body.addEventListener('click', function (event) {
     const id = target.getAttribute('data-id');
     if (id) agregarAlCarrito(id);
   }
-
   if (target && target.classList.contains('btn-menos')) {
     const id = target.getAttribute('data-id');
     if (id) restarDelCarrito(id);
@@ -255,5 +247,6 @@ document.body.addEventListener('click', function (event) {
       return;
     }
     alert('¡Gracias por tu compra!');
+  vaciarCarrito();
   }
 });
