@@ -242,11 +242,26 @@ document.body.addEventListener('click', function (event) {
   }
 
   if (target && target.id === 'btn-finalizar') {
-    if (carrito.length === 0) {
-      alert('Tu carrito está vacío.');
+    if (carrito.length === 0)
+      // sweetalert
+     {
+      Swal.fire({
+        title: "Carrito Vacío",
+        text: "No tienes perfumes para finalizar la compra.",
+        icon: "warning",
+        confirmButtonText: "OK",
+        draggable: true
+      });
       return;
     }
-    alert('¡Gracias por tu compra!');
-  vaciarCarrito();
+    Swal.fire({
+      title: "¡Gracias por tu compra!",
+      text: "Tu pedido será procesado a la brevedad.",
+      icon: "success",
+      draggable: true,
+      confirmButtonText: "OK"
+    });
+    
+    vaciarCarrito();
   }
 });
