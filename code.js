@@ -31,7 +31,7 @@ const productos = [
       imagen: "archivos/DELINA.jpg", categoria: "ella" },
 
     { id: 8, nombre: "Burberry Her", precio: 210000,
-      descripcion: "Una explosión de bayas rojas y negras con un corazón floral de jazmín y violeta, suavizado por notas de almizcle y ámbar. Fresca,adictiva y sensual.",
+      descripcion: "Una vibrante explosión de frutas rojas con un corazón floral, sobre una base suave y cálida. Audaz y elegante.",
       imagen: "archivos/burher.jpg", categoria: "ella" },
 
     { id: 9, nombre: "YSL Libre Intense", precio: 145000,

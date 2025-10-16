@@ -42,34 +42,6 @@ header {
     letter-spacing: 0.15em;
     margin-right: 10px;
 }
-
-.search-box {
-    display: flex;
-    align-items: center;
-    background-color: #fff; 
-    border: 1px solid #aaa; 
-    border-radius: 4px;
-    padding: 4px 8px;
-    gap: 5px;
-    flex-grow: 1; 
-    max-width: 400px;
-    margin: 0 10px; 
-}
-.search-box input {
-    border: none;
-    background: none;
-    padding: 4px;
-    font-size: 14px;
-    color: #333;
-    width: 100%;
-}
-.search-box .search-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    color: #0d6efd; 
-}
 .animate__animated.animate__bounce:hover {
     animation-play-state: running;  /* LO SAQUE DE LA PAGINA ANIMATED.STYLE */
 }
@@ -97,11 +69,11 @@ header {
     color: #4b5563;
 }
 
-/* PORTADA Y LAYOUT GENERAL */
+/* PORTADA Y LAYOUT GENERAL(VIDEO) */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 81vh;
     overflow: hidden;
 }
 .hero video {
@@ -129,16 +101,16 @@ header {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    justify-items: center; 
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* TARJETA DE PRODUCTO */
 .tarjeta {
-    width: 100%;
-    max-width: 360px; 
+    max-width: 320px; 
+    flex: 1 1 300px; 
     background: #fff;
     border: 1px solid #eee;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
@@ -197,51 +169,6 @@ header {
     background-color: #333;
 }
 
-/* CARRITO - CONTROLES */
-.cart-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-.cart-controls button {
-    border: 1px solid #333;
-    background-color: transparent;
-    width: 28px;
-    height: 28px;
-    border-radius: 4px;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #1a1a1a;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    padding: 0;
-}
-.cart-controls button:hover {
-    background-color: #1a1a1a;
-    color: #fff;
-    border-color: #1a1a1a;
-}
-.cart-controls span {
-    font-size: 14px;
-    min-width: 15px; 
-    text-align: center;
-}
-.remove-item {
-    padding: 6px 10px;
-    background: #fff;
-    border: 1px solid #dc0000;
-    color: #dc0000;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 12px;
-}
-.remove-item:hover {
-    background-color: #dc0000;
-    color: #fff;
-}
-
 /* FOOTER Y COMENTARIOS */
 .footer {
     text-align: center;
@@ -262,12 +189,6 @@ header {
     .brand {
         order: 1;
     }
-    .search-box {
-        order: 3; 
-        flex-basis: 100%;
-        max-width: 100%;
-        margin: 10px 0 0 0;
-    }
     .nav {
         order: 2;
     }
@@ -284,9 +205,6 @@ header {
     }
     .tarjeta img { 
         height: 220px;
-    }
-    .menu-derecha {
-        gap: 8px;
     }
 }
 /* --- ESTILOS PARA COMENTARIOS --- */
