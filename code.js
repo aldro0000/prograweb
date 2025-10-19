@@ -241,7 +241,8 @@ document.body.addEventListener('click', function (event) {
     vaciarCarrito();
   }
 
-  if (target && target.id === 'btn-finalizar') {
+  if (target && target.id === 'btn-finalizar') 
+    {const totalCompra = calcularTotal();
     if (carrito.length === 0)
       // sweetalert
      {
@@ -256,7 +257,7 @@ document.body.addEventListener('click', function (event) {
     }
     Swal.fire({
       title: "¡Gracias por tu compra!",
-      text: "Tu pedido será procesado a la brevedad.",
+      text: `El total fue: ${price(totalCompra)}. Tu pedido será procesado a la brevedad.`,
       icon: "success",
       draggable: true,
       confirmButtonText: "OK"
