@@ -52,7 +52,7 @@ function guardarCarrito() {
     localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
 }
 
-// Actualiza el número de ítems
+// Actualiza el número de productos
 function actualizarContadorCarrito() {
     const contadorElement = document.getElementById("contador-carrito");
     if (!contadorElement) return;
@@ -85,11 +85,15 @@ function renderSeccion(contenedorId, categoria) {
     box.innerHTML = tarjetasHtml;
 }
 
-function renderTiendaCompleta() {
+function renderTiendaCompleta(categoriaFiltro = "todas") {
     const box = document.getElementById("productos-tienda");
     if (!box) return;
 
-    const tarjetasHtml = productos
+    const productosFiltrados = categoriaFiltro === "todas" 
+        ? productos 
+        : productos.filter(p => p.categoria === categoriaFiltro);
+
+    const tarjetasHtml = productosFiltrados
         .map(p => `
             <article class="tarjeta">
                 <img src="${p.imagen}" alt="${p.nombre}">
@@ -265,4 +269,19 @@ document.body.addEventListener('click', function (event) {
     
     vaciarCarrito();
   }
+  
+    if (target && target.classList.contains('filtro-categoria')) {
+        const botonesFiltro = document.querySelectorAll('.filtro-categoria');
+        
+        
+        botonesFiltro.forEach(btn => {
+            btn.classList.remove('active', 'btn-dark'); 
+            btn.classList.add('btn-outline-dark');   
+        })
+        target.classList.add('active', 'btn-dark');   
+        target.classList.remove('btn-outline-dark');  
+        const categoria = target.getAttribute('data-categoria');
+        renderTiendaCompleta(categoria);
+    }
 });
+    
