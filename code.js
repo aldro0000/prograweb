@@ -64,7 +64,6 @@ function actualizarContadorCarrito() {
     contadorElement.textContent = totalItems;
 }
 
-// Renderizado de las tarjetas (para index.html)
 function renderSeccion(contenedorId, categoria) {
     const box = document.getElementById(contenedorId);
     if (!box) return;
